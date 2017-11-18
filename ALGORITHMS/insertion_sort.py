@@ -9,6 +9,7 @@ def insertion_sort_ascend(list):
 			i -= 1
 	return list
 
+
 def insertion_sort_descend(list):
 	for j in range(0, len(list)):
 		key = list[j]

@@ -1,19 +1,9 @@
 from insertion_sort import *
-
+from bubble_sort import *
 from selection_sort import *
 from merge_sort import *
 from random_data import get_random_data
 
-list = get_random_data(20, 10000)
-list = insertion_sort_descend(list)
-print (list)
-list = selection_sort_descend(list)
-print (list)
-list = merge_sort_descend(list)
-print (list)
-list = insertion_sort_ascend(list)
-print (list)
-list = selection_sort_ascend(list)
-print (list)
-list = merge_sort_ascend(list)
+list = get_random_data(10, 100)
+list = bubble_sort_descend(list)
 print (list)
