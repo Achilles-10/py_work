@@ -1,6 +1,5 @@
-def insertion_sort_descend(list):
-	n = len(list)
-	for j in range(0, n):
+def insertion_sort_ascend(list):
+	for j in range(0, len(list)):
 		key = list[j]
 		i = j - 1
 		while i >= 0:
@@ -10,9 +9,8 @@ def insertion_sort_descend(list):
 			i -= 1
 	return list
 
-def insertion_sort_ascend(list):
-	n = len(list)
-	for j in range(0, n):
+def insertion_sort_descend(list):
+	for j in range(0, len(list)):
 		key = list[j]
 		i = j - 1
 		while i >= 0:
