@@ -10,7 +10,7 @@ class Scoreboard():
 		self.screen_rect = screen.get_rect()
 		self.ai_settings = ai_settings
 		self.stats = stats
-		self.prep_level()
+
 
 		# 显示得分信息的字体设置
 		self.text_color = (30, 30, 30)
@@ -19,6 +19,7 @@ class Scoreboard():
 		# 准备初始得分和最高得分的图像
 		self.prep_score()
 		self.prep_high_score()
+		self.prep_level()
 
 	def prep_score(self):
 		"""将得分转换为渲染的图像"""
