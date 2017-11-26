@@ -2,11 +2,11 @@ import pygal
 
 from die import Die
 
-die1 = Die()
-die2 = Die(10)
+die1 = Die(8)
+die2 = Die(8)
 
 results = []
-for roll_num in range(50000):
+for roll_num in range(1000000):
 	result = die1.roll() + die2.roll()
 	results.append(result)
 
@@ -18,12 +18,12 @@ for value in range(2, max_result + 1):
 
 hist = pygal.Bar()
 
-hist.title = "Results of rolling a D6 and a D10 50000 times."
-hist.x_labels = list(range(2,17))
+hist.title = "Results of rolling two D8 100000 times."
+hist.x_labels = list(range(2, max_result + 1))
 hist.x_title = "Result"
 hist.y_title = "Frequency of Result"
 
-hist.add("D6 + D10", frequencies)
-hist.render_to_file('different_dice_visual.svg')
+hist.add("D8 + D8", frequencies)
+hist.render_to_file('dice_visual_8.svg')
 
 print(frequencies)

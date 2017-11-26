@@ -3,10 +3,10 @@ import pygal
 from die import Die
 
 die1 = Die()
-die2 = Die()
+die2 = Die(10)
 
 results = []
-for roll_num in range(5000):
+for roll_num in range(50000):
 	result = die1.roll() + die2.roll()
 	results.append(result)
 
@@ -18,12 +18,12 @@ for value in range(2, max_result + 1):
 
 hist = pygal.Bar()
 
-hist.title = "Results of rolling two D6 5000 times."
+hist.title = "Results of rolling a D6 and a D10 50000 times."
 hist.x_labels = list(range(2, max_result + 1))
 hist.x_title = "Result"
 hist.y_title = "Frequency of Result"
 
-hist.add("D6 + D6", frequencies)
-hist.render_to_file('dice_visual.svg')
+hist.add("D6 + D10", frequencies)
+hist.render_to_file('different_dice_visual_6_10.svg')
 
 print(frequencies)
